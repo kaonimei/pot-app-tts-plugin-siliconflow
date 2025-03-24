@@ -1,0 +1,11 @@
+{
+  "identifier": "com.whymeta.pot-app-tts-plugin-siliconflow",
+  "versions": [
+    {
+      "version": "0.0.1",
+      "desc": "auto",
+      "sha256": "715f4f92e7371435365a6659445a36ceec2ca0d58eeab9863ddf1e4686523575",
+      "url": "https://github.com/whymeta/pot-app-tts-plugin-siliconflow/releases/download/v0.0.1/plugin.pot-app-tts-plugin-siliconflow-0.0.1.potext"
+    }
+  ]
+}
