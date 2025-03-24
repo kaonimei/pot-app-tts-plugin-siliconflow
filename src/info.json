@@ -2,19 +2,19 @@
   "id": "plugin.pot-app-tts-plugin-siliconflow",
   "version": "0.0.1",
   "plugin_type": "tts",
-  "display": "Siliconflow Pot 文本转语音插件",
+  "display": "Siliconflow TTS",
   "icon": "siliconflow.svg",
   "homepage": "https://github.com/whymeta/pot-app-tts-plugin-siliconflow",
   "needs": [
     {
-      "key": "requestPath",
+      "key": "apiBaseUrl",
       "type": "input",
-      "display": "Siliconflow Api Base Url"
+      "display": "Api Base Url"
     },
     {
       "key": "apiKey",
       "type": "input",
-      "display": "Siliconflow Api Key"
+      "display": "Api Key"
     },
     {
       "key": "voice",
