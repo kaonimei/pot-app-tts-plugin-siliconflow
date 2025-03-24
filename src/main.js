@@ -4,23 +4,36 @@ async function tts(text, _lang, options = {}) {
     const { fetch, Body } = http;
 
     let { 
-        apiBaseUrl = "https://api.siliconflow.cn",
+        apiBaseUrl,
         apiKey,
-        voice = "alex",
-        speed = 1.0,
-        gain = 0.0 
+        voice,
+        speed,
+        gain
     } = config;
 
-    apiBaseUrl = apiBaseUrl.replace(/\/$/, '');
-    if (!apiBaseUrl.startsWith('http')) {
+    if (!apiBaseUrl) {
+        apiBaseUrl = "https://api.siliconflow.cn";
+    }
+    if (!/https?:\/\/.+/.test(apiBaseUrl)) {
         apiBaseUrl = `https://${apiBaseUrl}`;
     }
-    const endpointPath = '/v1/audio/speech';
-    if (!apiBaseUrl.endsWith(endpointPath)) {
-        apiBaseUrl += endpointPath;
+    if (apiBaseUrl.endsWith('/')) {
+        apiBaseUrl = apiBaseUrl.slice(0, -1);
+    }
+    if (!apiBaseUrl.endsWith('/audio/speech')) {
+        apiBaseUrl += '/v1/audio/speech';
     }
     if (!apiKey) {
         throw "[SiliconFlow] API key is required";
+    }
+    if (!voice) {
+        voice = "alex";
+    }
+    if (!speed) {
+        speed = 1.0;
+    }
+    if (!gain) {
+        gain = 0.0;
     }
 
     const MODEL_NAME = 'FunAudioLLM/CosyVoice2-0.5B';

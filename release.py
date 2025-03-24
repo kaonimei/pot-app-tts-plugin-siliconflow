@@ -63,7 +63,7 @@ def update_appcast(version, plugin_file):
         "version": version,
         "desc": "auto",
         "sha256": sha256,
-        "url": f"https://github.com/whymeta/pot-app-tts-plugin-siliconflow/releases/download/v{version}/{plugin_file}"
+        "url": f"https://github.com/kaonimei/pot-app-tts-plugin-siliconflow/releases/download/v{version}/{plugin_file}"
     }
     
     # Add or update version
